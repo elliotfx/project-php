@@ -1,0 +1,99 @@
+* {
+    font-family: "Permanent Marker", sans-serif;
+
+}
+
+header {
+    background-color: transparent; /* Header background transparent */
+    padding: 60px; /* Space inside the header */
+    height: 120px; /* Height of the header */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the logo and buttons horizontally */
+    position: relative;
+    height: 100%;
+    gap: 30px; /* Adds space between the logo and buttons */
+}
+
+.logo {
+    height: 80px; /* Adjust logo size */
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between buttons */
+}
+
+.nav-buttons li {
+    display: inline;
+}
+
+.nav-buttons .btn {
+    text-decoration: none;
+    padding: 15px 0; /* Suppression du padding latéral pour éviter que la ligne soit trop large */
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block; /* Permet au bouton de s'adapter à la largeur du texte */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-buttons .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px; /* Positionnement de la ligne en dessous du texte */
+    width: 0; /* La ligne commence à 0 de largeur */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-buttons .btn:hover::after {
+    width: 100%; /* La ligne s'étend sur toute la largeur du texte */
+}
+
+.nav-buttons .btn:hover {
+    color: white; /* Tu peux également modifier la couleur du texte si nécessaire */
+}
+
+
+
+/* ---- Responsive Design ---- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;  
+        align-items: center;     
+    }
+
+    .logo {
+        margin-bottom: 15px; /* Adds spacing below the logo */
+    }
+
+    .nav-buttons {
+        flex-direction: column; 
+        gap: 15px; /* Adjusts space between buttons for mobile */
+    }
+
+    .nav-buttons .btn {
+        padding: 12px 25px; /* Adjust button size on mobile */
+        font-size: 16px; /* Reduce button text size slightly on mobile */
+    }
+}
+
+.connexions {
+    margin-left: auto; /* Aligne à droite */
+}

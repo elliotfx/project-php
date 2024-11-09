@@ -1,0 +1,204 @@
+body {
+    background-image: url('./images/bg.png');
+    background-size: 105%;
+    background-position-x: 30%;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+h1 {
+    color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: transparent; /* Header background transparent */
+    padding: 60px; /* Space inside the header */
+    height: 120px; /* Height of the header */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the logo and buttons horizontally */
+    position: relative;
+    height: 100%;
+    gap: 30px; /* Adds space between the logo and buttons */
+}
+
+.logo {
+    height: 80px; /* Adjust logo size */
+    width: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between buttons */
+}
+
+.nav-buttons li {
+    display: inline;
+}
+
+.nav-buttons .btn {
+    text-decoration: none;
+    padding: 15px 0; /* Suppression du padding latéral pour éviter que la ligne soit trop large */
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block; /* Permet au bouton de s'adapter à la largeur du texte */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-buttons .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px; /* Positionnement de la ligne en dessous du texte */
+    width: 0; /* La ligne commence à 0 de largeur */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-buttons .btn:hover::after {
+    width: 100%; /* La ligne s'étend sur toute la largeur du texte */
+}
+
+.nav-buttons .btn:hover {
+    color: white; /* Tu peux également modifier la couleur du texte si nécessaire */
+}
+
+
+
+
+
+
+
+
+
+/* Style pour centrer le formulaire et donner une apparence agréable */
+#form {
+    background-color: rgba(255, 255, 255, 0.65); /* Blanc avec légère transparence */
+    padding: 40px; /* Réduire le padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Ajuster la largeur */
+    max-width: 90%; /* Assurer qu'il est responsive sur petits écrans */
+    text-align: center;
+    margin: 0 auto; /* Centrer la div horizontalement */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+div p {
+    margin-top: 20px;
+    font-size: x-small;
+}
+div a:hover{
+    color: purple;
+}
+
+/* Conteneur pour le champ de mot de passe et l'icône */
+.password-container {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments côte à côte */
+    align-items: center; /* Centrer verticalement les éléments */
+    width: 100%;
+    margin-left: 12px;
+}
+
+/* Champ de texte de mot de passe */
+.password-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Style pour le bouton avec l'image (icône œil) */
+.toggle-password {
+    background: none;
+    border: none;
+    margin-left: 5px; /* Espacement entre l'input et l'icône */
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 20px;
+    height: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 28px);
+    padding: 8px; /* Réduire le padding */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Réduire la taille de la police */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    font-size: 10px; /* Réduire la taille du texte sur le bouton */
+    background-color: #ff8800b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ---- Responsive Design ---- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;  
+        align-items: center;     
+    }
+
+    .logo {
+        margin-bottom: 15px; /* Adds spacing below the logo */
+    }
+
+    .nav-buttons {
+        flex-direction: column; 
+        gap: 15px; /* Adjusts space between buttons for mobile */
+    }
+
+    .nav-buttons .btn {
+        padding: 12px 25px; /* Adjust button size on mobile */
+        font-size: 16px; /* Reduce button text size slightly on mobile */
+    }
+
+    #form {
+        width: 90%; /* Prendre plus de largeur sur mobile */
+        padding: 30px; /* Ajuster le padding sur mobile */
+    }
+}

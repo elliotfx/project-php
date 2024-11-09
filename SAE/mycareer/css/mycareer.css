@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne le contenu en haut */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white; /* Couleur du texte par défaut */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    max-width: 800px; /* Largeur maximale du conteneur */
+}
+
+.player_container {
+    margin: 10px; /* Espacement entre les divs */
+}
+
+.player {
+    background-color: #333; /* Couleur de fond pour les divs des joueurs */
+    color: white; /* Couleur du texte */
+    width: 150px; /* Largeur des divs */
+    height: 150px; /* Hauteur des divs pour les rendre carrés */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    transition: transform 0.2s; /* Transition pour l'effet de survol */
+}
+
+.player:hover {
+    transform: scale(1.05); /* Effet de survol */
+}
+
+form {
+    margin: 20px; /* Espacement autour des formulaires */
+}

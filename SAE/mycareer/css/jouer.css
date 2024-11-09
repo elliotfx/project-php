@@ -1,0 +1,34 @@
+h1{
+    color: antiquewhite;
+}
+
+a{
+    color: antiquewhite;
+}
+
+/* Styles pour le bouton */
+button {
+    background-color: #FF6F61; /* Couleur de fond dynamique */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    padding: 15px 30px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s, transform 0.3s; /* Animation lors du survol */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #FF4C3B; /* Couleur de fond au survol */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Effet au clic */
+button:active {
+    transform: translateY(0); /* Rétablir la position au clic */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Réduire l'ombre au clic */
+}
